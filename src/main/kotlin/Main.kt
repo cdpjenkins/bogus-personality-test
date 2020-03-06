@@ -1,12 +1,10 @@
 fun main(args: Array<String>) {
-    val numberOfQuestions = 25
+    val numberOfQuestions = Trait.values().size
 
     val traits = Trait.values().toList().shuffled().take(numberOfQuestions)
 
-    val positiveResponses = traits.map { trait ->
-        val response: Boolean = askOneQuestion(trait.toString())
-        trait to response
-    }
+    val positiveResponses = traits
+        .map { trait -> trait to askOneQuestion(trait.toString()) }
         .filter { it.second}
         .map { it.first.toString() }
 
