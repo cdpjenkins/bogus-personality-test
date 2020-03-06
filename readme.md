@@ -8,9 +8,9 @@ answer.
 
 Run it as follows:
 
-   ./gradlew run -q --console=plain 
+    ./gradlew run -q --console=plain 
 
-It will show a sequence of traits (by default 25) chosen at random. For each one,
+It will show a sequence of traits in a random order. For each one,
 answer y or n. It will then tell you how strongly you display each of the four DISA
 personality types.
 
