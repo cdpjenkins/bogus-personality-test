@@ -4,7 +4,7 @@ fun main(args: Array<String>) {
     val traits = Trait.values().toList().shuffled().take(numberOfQuestions)
 
     val positiveResponses = traits
-        .map { trait -> trait to askOneQuestion(trait.toString()) }
+        .map { trait -> trait to askOneQuestion("${trait.toString()}?") }
         .filter { it.second}
         .map { it.first.toString() }
 
